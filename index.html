@@ -20,7 +20,7 @@
   <meta content="IN" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1641779334658" as="style">
+  <link rel="preload" href="/css/style.css?time=1641783824957" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -672,53 +672,34 @@ button {
 .cover-wrapper.focus .menu .list-h a:hover {
   background: var(--color-card);
 }
-.cover-wrapper.dock .top {
-  margin-bottom: 48px;
+.cover-wrapper.focus .menu {
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
 }
-.cover-wrapper.dock .menu {
+.cover-wrapper.focus .menu .list-h {
+  margin: 2px;
+}
+.cover-wrapper.focus .menu:hover {
   background: rgba(255,255,255,0.5);
-  position: absolute;
-  bottom: 0;
-  max-width: 100%;
-}
-.cover-wrapper.dock .menu .list-h {
-  flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -khtml-flex-wrap: nowrap;
-  -moz-flex-wrap: nowrap;
-  -o-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  margin: 4px;
-}
-.cover-wrapper.dock .menu .list-h a+a {
-  margin-left: 4px;
-}
-@media screen and (max-width: 500px) {
-  .cover-wrapper.dock .menu .list-h {
-    overflow-x: scroll;
-  }
-  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar {
-    height: 0;
-    width: 0;
-  }
-  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar-track-piece {
-    background: transparent;
-  }
-  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar-thumb {
-    background: #44d7b6;
-    cursor: pointer;
-    border-radius: 0;
-    -webkit-border-radius: 0;
-  }
-  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar-thumb:hover {
-    background: #ff5722;
-  }
 }
 @supports (backdrop-filter: blur(20px)) {
-  .cover-wrapper.dock .menu {
+  .cover-wrapper.focus .menu:hover {
     background: rgba(255,255,255,0.5);
     backdrop-filter: saturate(200%) blur(20px);
   }
+}
+.cover-wrapper.focus .menu .list-h a {
+  margin: 2px;
+}
+.cover-wrapper.focus .menu .list-h a:hover {
+  opacity: 1;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  background: var(--color-card);
 }
 .cover-wrapper #parallax-window {
   position: absolute;
@@ -1623,8 +1604,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1641779334658" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1641779334658"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1641783824957" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1641783824957"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -2314,7 +2295,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="full" class='cover-wrapper  dock' style="display: ;">
+      <div id="full" class='cover-wrapper  focus' style="display: ;">
         
   <div id="parallax-window"></div>
 
@@ -2322,8 +2303,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='top'>
     
     
-      <p class="title">Volantis</p>
+      <p class="title">IN</p>
     
+    
+      <p class="subtitle">记录的是什么呢？</p>
     
   </div>
   <div class='bottom'>
@@ -2698,8 +2681,8 @@ Qu...
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/css/message.css?time=1641779334658')
-      volantis.js('/js/thirdparty/message.js?time=1641779334658', () => {
+      volantis.css('/css/message.css?time=1641783824957')
+      volantis.js('/js/thirdparty/message.js?time=1641783824957', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2744,8 +2727,8 @@ Qu...
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/css/message.css?time=1641779334658')
-      volantis.js('/js/thirdparty/message.js?time=1641779334658', () => {
+      volantis.css('/css/message.css?time=1641783824957')
+      volantis.js('/js/thirdparty/message.js?time=1641783824957', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2804,8 +2787,8 @@ Qu...
     }
     
     if (typeof iziToast === "undefined") {
-      volantis.css('/css/message.css?time=1641779334658')
-      volantis.js('/js/thirdparty/message.js?time=1641779334658', () => {
+      volantis.css('/css/message.css?time=1641783824957')
+      volantis.js('/js/thirdparty/message.js?time=1641783824957', () => {
         hideMessage(done);
       });
     } else {
@@ -3043,7 +3026,7 @@ Qu...
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/plugins/rightMenu.js?time=1641779334658')
+    volantis.js('/js/plugins/rightMenu.js?time=1641783824957')
   </script>
 
 
@@ -3057,19 +3040,19 @@ Qu...
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1641779334658")
+        volantis.js("/js/plugins/sites.js?time=1641783824957")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1641779334658")
+        volantis.js("/js/plugins/friends.js?time=1641783824957")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1641779334658")
+        volantis.js("/js/plugins/contributors.js?time=1641783824957")
       }
     
   };
@@ -3191,7 +3174,7 @@ Qu...
 
 
 
-<script src="/js/app.js?time=1641779334658.js"></script>
+<script src="/js/app.js?time=1641783824957.js"></script>
 
 
 <!-- optional -->
@@ -3204,7 +3187,7 @@ Qu...
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1641779334658");
+    return volantis.js("/js/search/hexo.js?time=1641783824957");
   }
 
   function loadSearchService() {
@@ -3269,7 +3252,7 @@ Qu...
 
 
   <script>
-  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp"];
+  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -3312,7 +3295,7 @@ Qu...
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1641779334658').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1641783824957').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
